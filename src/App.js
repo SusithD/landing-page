@@ -13,7 +13,7 @@ const App = () => {
       <HeroSection />
       <FrameSection />
       <FrameSectionSecond />
-      <FAQSection /> {/* Add FrameSection here */}
+      <FAQSection />
       <Footer />
     </>
   );
