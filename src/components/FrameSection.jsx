@@ -56,12 +56,13 @@ const FrameSection = () => {
         <h2
           className="
             font-poppins 
-            text-xl 
-            sm:text-2xl 
+            text-[27px] 
             font-semibold 
-            tracking-wide 
-            text-purpleCustom 
-            mb-4
+            leading-[33px] 
+            tracking-[0.4px] 
+            text-[#6B3CC9] 
+            mb-4 
+            text-center sm:text-left
           "
         >
           Web & Mobile App Development

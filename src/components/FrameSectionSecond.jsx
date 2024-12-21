@@ -11,7 +11,7 @@ const FrameSectionSecond = () => {
         mx-auto 
         mt-[60px] 
         flex flex-col 
-        sm:flex-row-reverse  /* Reverse flex direction for the image on the right */
+        sm:flex-row-reverse
         sm:items-center 
         gap-[40px] 
         sm:gap-[108px] 
@@ -28,7 +28,7 @@ const FrameSectionSecond = () => {
           sm:h-[414px]
           mb-6 
           sm:mb-0
-          flex justify-center  /* Center the image on mobile */
+          flex justify-center 
         "
       >
         <img
@@ -47,7 +47,7 @@ const FrameSectionSecond = () => {
           flex flex-col justify-start 
           text-left 
           px-4
-          text-center sm:text-left  /* Center text on mobile, left-align on larger screens */
+          
         "
       >
         {/* Title */}
