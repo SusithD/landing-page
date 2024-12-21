@@ -45,7 +45,11 @@ const FAQSection = () => {
             onClick={() => toggleQuestion(index)}
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-sm sm:text-base font-poppins font-medium text-gray-900">
+              <h3
+                className={`text-sm sm:text-base font-poppins font-medium ${
+                  selectedQuestion === index ? "text-purpleCustom" : "text-gray-900"
+                }`}
+              >
                 {item.question}
               </h3>
               <span
