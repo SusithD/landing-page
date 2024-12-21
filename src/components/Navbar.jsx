@@ -5,6 +5,20 @@ import clsx from 'clsx';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // This effect will prevent body scrolling when the menu is open
+  React.useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup the effect when menu is closed
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
+
   return (
     <header className="bg-[#6B3CC9] text-white">
       <nav className="w-full mx-auto flex items-center justify-between p-[26px_80px] md:p-[26px_60px] lg:p-[26px_40px] sm:p-[26px_20px]">
@@ -67,7 +81,7 @@ const Navbar = () => {
       <div
         id="mobile-menu"
         className={clsx(
-          "fixed top-0 left-0 w-full h-full bg-white text-black flex flex-col justify-start items-start p-8 transition-transform duration-300",
+          "fixed top-0 left-0 w-full h-full bg-white text-black flex flex-col justify-start items-start p-8 transition-transform duration-300 ease-in-out z-50",  // Added z-50 to make sure it stays on top
           menuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
