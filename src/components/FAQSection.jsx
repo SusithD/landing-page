@@ -1,14 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FAQSection = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const toggleQuestion = (index) => {
-    if (selectedQuestion === index) {
-      setSelectedQuestion(null); // Deselect if the same question is clicked
-    } else {
-      setSelectedQuestion(index); // Select the clicked question
-    }
+    setSelectedQuestion(selectedQuestion === index ? null : index);
   };
 
   const faqData = [
@@ -30,29 +26,42 @@ const FAQSection = () => {
   ];
 
   return (
-    <section
-      className="relative w-[846px] h-[392px] mt-[1847px] mx-auto gap-[28px] opacity-100"
-    >
-      {/* FAQ Title */}
-      <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <section className="w-full max-w-[800px] mx-auto mt-16">
+      {/* Title */}
+      <h2 className="text-center text-xl font-poppins font-semibold text-purple-600 mb-6">
+        Frequently Asked Questions
+      </h2>
 
       {/* FAQ Items */}
-      {faqData.map((item, index) => (
-        <div
-          key={index}
-          onClick={() => toggleQuestion(index)}
-          className={`${
-            selectedQuestion === index
-              ? "w-[846px] h-[149px] p-[24px_0px_0px_0px] opacity-100" // Selected question style
-              : "w-[846px] h-[76px] p-[24px_0px_0px_0px] opacity-100" // Non-selected question style
-          } bg-[#f3f3f3] rounded-tl-[7px] rounded-tr-[0px] rounded-br-[0px] rounded-bl-[0px] cursor-pointer transition-all`}
-        >
-          <h3 className="text-lg font-semibold">{item.question}</h3>
-          {selectedQuestion === index && (
-            <p className="mt-3 text-sm text-[#333333]">{item.answer}</p>
-          )}
-        </div>
-      ))}
+      <div className="space-y-4">
+        {faqData.map((item, index) => (
+          <div
+            key={index}
+            className={`p-4 rounded-lg shadow-sm cursor-pointer transition-all ${
+              selectedQuestion === index
+                ? "bg-purple-100"
+                : "bg-gray-100 hover:bg-purple-50"
+            }`}
+            onClick={() => toggleQuestion(index)}
+          >
+            <div className="flex justify-between items-center">
+              <h3 className="text-base font-poppins font-medium text-gray-900">
+                {item.question}
+              </h3>
+              <span
+                className={`text-xl transition-transform ${
+                  selectedQuestion === index ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                {selectedQuestion === index ? "−" : "+"}
+              </span>
+            </div>
+            {selectedQuestion === index && (
+              <p className="mt-3 text-sm text-gray-700">{item.answer}</p>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
