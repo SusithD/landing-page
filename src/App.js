@@ -1,15 +1,19 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection'; // Import the HeroSection component
+import HeroSection from './components/HeroSection';
+import FrameSection from './components/FrameSection';
+import FrameSectionSecond from './components/FrameSectionSecond'; 
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <HeroSection />
-        {/* You can add other sections like Features, FAQ, Footer, etc. here */}
-      </main>
+      <HeroSection />
+      <FrameSection />
+      <FrameSectionSecond /> {/* Add FrameSection here */}
+      <footer>
+        {/* Footer content */}
+      </footer>
     </>
   );
 };
