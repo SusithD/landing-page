@@ -1,5 +1,5 @@
 import React from 'react';
-import frameImage from '../assets/frame-image.jpg'; // Replace with your actual image path
+import frameImage from '../assets/frame-image.jpg'; 
 
 const FrameSection = () => {
   return (

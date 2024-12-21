@@ -1,5 +1,5 @@
 import React from 'react';
-import secondFrameImage from '../assets/second-frame-image.jpg'; // Replace with your actual image path
+import secondFrameImage from '../assets/second-frame-image.jpg';
 
 const FrameSectionSecond = () => {
   return (

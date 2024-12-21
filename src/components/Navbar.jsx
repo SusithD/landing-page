@@ -5,7 +5,6 @@ import clsx from 'clsx';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // This effect will prevent body scrolling when the menu is open
   React.useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -13,7 +12,6 @@ const Navbar = () => {
       document.body.style.overflow = 'auto';
     }
 
-    // Cleanup the effect when menu is closed
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -24,7 +22,7 @@ const Navbar = () => {
       <nav className="w-full mx-auto flex items-center justify-between p-[26px_80px] md:p-[26px_60px] lg:p-[26px_40px] sm:p-[26px_20px]">
         {/* Logo */}
         <div>
-          <img src={logo} alt="Logo" className="w-[238.89px] h-[25px]" />
+          <img src={logo} alt="Logo" className="w-[239px] h-auto" />
         </div>
 
         {/* Desktop Navigation Links */}
@@ -35,7 +33,7 @@ const Navbar = () => {
           <li><a href="#careers" className="text-white hover:underline">Careers</a></li>
         </ul>
 
-        {/* Mobile Menu Toggle (Hamburger) */}
+        {/* Mobile Menu Toggle */}
         <button
           aria-label="Open Menu"
           aria-expanded={menuOpen ? 'true' : 'false'}
