@@ -1,16 +1,16 @@
 import React from "react";
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-10 mt-10" style={{ backgroundColor: '#6B3CC9' }}>
+    <footer className="bg-purpleCustom text-white py-10 mt-10">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
         {/* Left Section */}
         <div className="w-full md:w-1/3">
-        <div>
-          <img src={logo} alt="Logo" className="w-[238.89px] h-[25px]" />
-        </div>
-          <p className="text-sm">
+          <div>
+            <img src={logo} alt="Logo" className="w-[238.89px] h-[25px]" />
+          </div>
+          <p className="text-sm mt-4">
             Your goal is our target. Not anything in between. We use online
             marketing platforms and tools to achieve a single objective - your
             business results.
@@ -40,10 +40,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-purple-600 mt-8 pt-4 text-center text-sm">
-        <span className="mr-2">Privacy Policy</span>
+      <div className="border-t border-purpleCustom/70 mt-8 pt-4 text-center text-sm">
+        <span className="mr-2 cursor-pointer hover:underline">Privacy Policy</span>
         <span>|</span>
-        <span className="ml-2">Terms & Conditions</span>
+        <span className="ml-2 cursor-pointer hover:underline">Terms & Conditions</span>
       </div>
     </footer>
   );

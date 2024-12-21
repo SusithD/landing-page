@@ -9,12 +9,12 @@ const FrameSection = () => {
         w-full 
         max-w-[1064px] 
         mx-auto 
-        mt-[60px] 
+        mt-14 
         flex flex-col 
         sm:flex-row 
         sm:items-center 
-        gap-[40px] 
-        sm:gap-[108px] 
+        gap-10 
+        sm:gap-28 
         opacity-100
       "
     >
@@ -25,16 +25,16 @@ const FrameSection = () => {
           w-full 
           sm:w-[414px] 
           h-[414px] 
-          sm:h-[414px]
           mb-6 
-          sm:mb-0
-          flex justify-center  /* Center the image on mobile */
+          sm:mb-0 
+          flex 
+          justify-center
         "
       >
         <img
           src={frameImage}
           alt="Frame"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
 
@@ -44,23 +44,24 @@ const FrameSection = () => {
           w-full 
           sm:w-[542px] 
           h-auto 
-          flex flex-col justify-start 
-          text-left 
-          px-4
-          text-center sm:text-left  /* Center text on mobile, left-align on larger screens */
+          flex 
+          flex-col 
+          justify-start 
+          px-4 
+          text-center 
+          sm:text-left
         "
       >
         {/* Title */}
         <h2
           className="
             font-poppins 
-            text-[27px] 
+            text-xl 
+            sm:text-2xl 
             font-semibold 
-            leading-[33px] 
-            tracking-[0.4px] 
-            text-[#6B3CC9] 
-            mb-4 
-            text-center sm:text-left  /* Center title on mobile, left-align on larger screens */
+            tracking-wide 
+            text-purpleCustom 
+            mb-4
           "
         >
           Web & Mobile App Development
@@ -69,17 +70,16 @@ const FrameSection = () => {
         {/* Description */}
         <p
           className="
-            text-[16px] 
-            leading-[24px] 
-            text-[#333333]
+            text-base 
+            leading-6 
+            text-gray-800 
             mb-6
-            text-center sm:text-left  /* Center text on mobile, left-align on larger screens */
           "
         >
-          Your web and mobile Apps are pieces of the puzzle to grow your business. 
-          We use frameworks which tailor content and engagement methods to respond 
-          to different intents shown by your potential customers who interact with 
-          your business online.
+          Your web and mobile apps are pieces of the puzzle to grow your business. 
+          We use frameworks tailored to content and engagement methods, responding 
+          to different intents shown by potential customers interacting with your 
+          business online.
         </p>
 
         {/* Button */}
@@ -87,14 +87,14 @@ const FrameSection = () => {
           className="
             mt-3 
             px-4 py-2 
-            bg-[#F28D35] 
+            bg-orangeCustom 
             text-white 
             font-bold 
             rounded-md 
-            hover:bg-[#d97a2d] 
+            hover:bg-orangeCustomHover 
             transition duration-300 
             w-[150px] 
-            mx-auto sm:mx-0  /* Center button on mobile, keep on the left on larger screens */
+            mx-auto sm:mx-0
           "
         >
           LEARN MORE

@@ -28,7 +28,7 @@ const FAQSection = () => {
   return (
     <section className="w-full max-w-[800px] mx-auto mt-8 px-4 sm:px-0">
       {/* Title */}
-      <h2 className="text-center text-lg sm:text-xl font-poppins font-semibold text-purple-600 mb-6">
+      <h2 className="text-center text-lg sm:text-xl font-poppins font-semibold text-purpleCustom mb-6">
         Frequently Asked Questions
       </h2>
 
@@ -39,8 +39,8 @@ const FAQSection = () => {
             key={index}
             className={`p-4 rounded-lg shadow-sm cursor-pointer transition-all ${
               selectedQuestion === index
-                ? "bg-purple-100"
-                : "bg-gray-100 hover:bg-purple-50"
+                ? "bg-purpleCustom/10"
+                : "bg-gray-100 hover:bg-purpleCustom/5"
             }`}
             onClick={() => toggleQuestion(index)}
           >
