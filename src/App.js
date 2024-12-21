@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FrameSection from './components/FrameSection';
 import FrameSectionSecond from './components/FrameSectionSecond'; 
+import FAQSection from './components/FAQSection';
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <FrameSection />
-      <FrameSectionSecond /> {/* Add FrameSection here */}
+      <FrameSectionSecond />
+      <FAQSection /> {/* Add FrameSection here */}
       <footer>
         {/* Footer content */}
       </footer>
