@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        purpleCustom: '#6B3CC9',
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],

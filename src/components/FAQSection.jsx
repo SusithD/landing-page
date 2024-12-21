@@ -26,9 +26,9 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-[800px] mx-auto mt-16">
+    <section className="w-full max-w-[800px] mx-auto mt-8 px-4 sm:px-0">
       {/* Title */}
-      <h2 className="text-center text-xl font-poppins font-semibold text-purple-600 mb-6">
+      <h2 className="text-center text-lg sm:text-xl font-poppins font-semibold text-purple-600 mb-6">
         Frequently Asked Questions
       </h2>
 
@@ -45,11 +45,11 @@ const FAQSection = () => {
             onClick={() => toggleQuestion(index)}
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-base font-poppins font-medium text-gray-900">
+              <h3 className="text-sm sm:text-base font-poppins font-medium text-gray-900">
                 {item.question}
               </h3>
               <span
-                className={`text-xl transition-transform ${
+                className={`text-lg sm:text-xl transition-transform ${
                   selectedQuestion === index ? "rotate-180" : "rotate-0"
                 }`}
               >
@@ -57,7 +57,9 @@ const FAQSection = () => {
               </span>
             </div>
             {selectedQuestion === index && (
-              <p className="mt-3 text-sm text-gray-700">{item.answer}</p>
+              <p className="mt-3 text-xs sm:text-sm text-gray-700">
+                {item.answer}
+              </p>
             )}
           </div>
         ))}

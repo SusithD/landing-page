@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import FrameSection from './components/FrameSection';
 import FrameSectionSecond from './components/FrameSectionSecond'; 
 import FAQSection from './components/FAQSection';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -13,9 +14,7 @@ const App = () => {
       <FrameSection />
       <FrameSectionSecond />
       <FAQSection /> {/* Add FrameSection here */}
-      <footer>
-        {/* Footer content */}
-      </footer>
+      <Footer />
     </>
   );
 };
